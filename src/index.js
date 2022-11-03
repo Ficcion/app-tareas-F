@@ -1,8 +1,10 @@
-import { ToDo } from "./classes/todo.class";
 import './styles.css';
 
-// import { ToDo } from './classes/todo.class';
+import { Todo, TodoList } from "./classes";
+import { crearTodoHtml } from './js/componentes';
 
-const tarea = new ToDo('Aprender JavaScript');
+export const todoList = new TodoList();
 
-console.log( tarea );
+todoList.todos.forEach( crearTodoHtml );
+
+console.log( 'todos', todoList.todos );
